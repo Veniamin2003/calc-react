@@ -1,0 +1,13 @@
+.containerType {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.containerType img {
+    height: 70px;
+}
+/*
+.containerType p {
+    text-align: center;
+}*/
