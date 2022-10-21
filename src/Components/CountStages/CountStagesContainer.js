@@ -1,5 +1,5 @@
 import React from "react";
-import {updateCountStagesAC} from "../../redux/types-reducer";
+import {updateHeightStagesAC, updateWidthStagesAC} from "../../redux/types-reducer";
 import {connect} from "react-redux";
 import CountStages from "./CountStages";
 
@@ -11,8 +11,15 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateCountStages: (count) => {
-            let action = updateCountStagesAC(count);
+        updateWidthStages: (count) => {
+            debugger
+            let action = updateWidthStagesAC(count);
+            dispatch(action);
+        },
+
+        updateHeightStages: (count) => {
+            debugger
+            let action = updateHeightStagesAC(count);
             dispatch(action);
         }
     }

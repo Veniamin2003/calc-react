@@ -12,9 +12,9 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateMaterial: (price) => {
+        updateMaterial: (price, selectedId) => {
             debugger
-            let action = updateMaterialAC(price);
+            let action = updateMaterialAC(price, selectedId);
             dispatch(action);
         }
     }
