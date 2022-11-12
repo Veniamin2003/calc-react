@@ -1,0 +1,11 @@
+.viewBlock {
+    grid-area: view;
+}
+
+.imageBlock {
+    text-align: center;
+    height: 10em;
+    width: 10em;
+    border-radius: 80%;
+    margin: 20px 0 20px 0;
+}

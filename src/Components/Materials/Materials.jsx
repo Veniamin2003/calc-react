@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Materials.module.css'
+import s from './../ContainerCSSModule/Container.module.css'
 import MaterialsItem from "./MaterialsItem";
 
 function Materials(props) {
@@ -15,7 +15,6 @@ function Materials(props) {
             {state.materials.map(el => <MaterialsItem id={el.id} img={el.img} name={el.name}
                                                       price={el.price} materialSum={state.materialSum}
                                                       selectedId={state.selectedMaterialId} updateMaterial={updateMaterial}/>)}
-            <div className={s.allSum}><textarea value={state.materialSum}></textarea></div>
         </div>
     )
 }

@@ -1,28 +1,20 @@
 import React from 'react'
-import s from './StairsType.module.css'
+import s from './../ContainerCSSModule/Container.module.css'
+import StairsTypesItem from "./Types/StairsTypesItem";
 
 function StairsTypes(props) {
 debugger
     let state = props.typesPage
 
-    let onTypeChange = (price) => {
-        props.updateType(price);
+    let onTypeChange = (price, selectedId) => {
+        props.updateType(price, selectedId);
     }
+
     return (
         <div className={s.typesLayer}>
-            {state.stairsTypes.map(el => (
-                <div key={el.id} className={s.containerType}>
-                    <div>
-                        <img src={el.img} onClick={() => onTypeChange(el.price)}/>
-                    </div>
-                    <div>
-                        <p>{el.name}</p>
-                    </div>
-                    <div>
-                        <p>{el.price} Руб.</p>
-                    </div>
-                </div>
-            ))}
+            {state.stairsTypes.map(el => <StairsTypesItem id={el.id} img={el.img}
+                                                          name={el.name} price={el.price}
+                                                          selectedId={state.selectedStairsTypesId} onTypeChange={onTypeChange}/>)}
         </div>
     )
 }
