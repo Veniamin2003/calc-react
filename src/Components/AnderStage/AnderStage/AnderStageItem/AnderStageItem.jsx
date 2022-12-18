@@ -1,5 +1,5 @@
 import React from "react";
-import s from './../../../ContainerCSSModule/Container.module.css'
+import s from './../../../Materials/Materials.module.css'
 
 function AnderStageItem(props) {
     let isActive
@@ -9,11 +9,14 @@ function AnderStageItem(props) {
 
     return (
         <div key={props.id} className={containerTypeClass} onClick={() => props.updateAnderStage(props.price, props.id)}>
-            <div>
+            <div className={s.parent}>
                 <img src={props.img}/>
+                <div className={s.child}>
+                    <p>{props.description}</p>
+                </div>
             </div>
-            <div>
-                <p>{props.name}</p>
+            <div className={s.name}>
+                <h2>{props.name}</h2>
             </div>
         </div>
     )

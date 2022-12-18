@@ -12,7 +12,7 @@ function AnderStage(props) {
     }
     return (
         <div className={s.typesLayer}>
-            {state.anderStage.map(el => <AnderStageItem id={el.id} img={el.img} name={el.name} price={el.price}
+            {state.anderStage.map(el => <AnderStageItem id={el.id} img={el.img} name={el.name} price={el.price} description={el.description}
                                                       selectedId={state.selectedAnderStageId} updateAnderStage={updateAnderStage}/>)}
         </div>
     )

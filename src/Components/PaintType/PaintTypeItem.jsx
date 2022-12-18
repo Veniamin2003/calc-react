@@ -1,5 +1,5 @@
 import React from "react";
-import s from './../ContainerCSSModule/Container.module.css'
+import s from './../Materials/Materials.module.css'
 
 function PaintTypeItem(props) {
     let isActive
@@ -9,14 +9,14 @@ function PaintTypeItem(props) {
 
     return (
         <div key={props.id} className={containerTypeClass} onClick={() => props.updatePaintType(props.price, props.id)}>
-            <div>
-                <img src={props.img} />
+            <div className={s.parent}>
+                <img src={props.img}/>
+                <div className={s.child}>
+                    <p>{props.description}</p>
+                </div>
             </div>
-            <div>
-                <p>{props.name}</p>
-            </div>
-            <div>
-                <p>{props.price} Руб.</p>
+            <div className={s.name}>
+                <h2>{props.name}</h2>
             </div>
         </div>)
 }

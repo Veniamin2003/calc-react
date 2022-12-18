@@ -12,7 +12,7 @@ debugger
 
     return (
         <div className={s.typesLayer}>
-            {state.stairsTypes.map(el => <StairsTypesItem id={el.id} img={el.img}
+            {state.stairsTypes.map(el => <StairsTypesItem id={el.id} img={el.img} description={el.description}
                                                           name={el.name} price={el.price}
                                                           selectedId={state.selectedStairsTypesId} onTypeChange={onTypeChange}/>)}
         </div>

@@ -12,7 +12,7 @@ function Materials(props) {
     }
     return (
         <div className={s.typesLayer}>
-            {state.materials.map(el => <MaterialsItem id={el.id} img={el.img} name={el.name}
+            {state.materials.map(el => <MaterialsItem id={el.id} img={el.img} name={el.name} description={el.description}
                                                       price={el.price} materialSum={state.materialSum}
                                                       selectedId={state.selectedMaterialId} updateMaterial={updateMaterial}/>)}
         </div>

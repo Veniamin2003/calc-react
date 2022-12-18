@@ -3,7 +3,7 @@ import s from './StairTypeView.module.css'
 import m from "./../MaterialView/MaterialView.module.css";
 
 import StairTypeViewItem from "./StairTypeViewItem/StairTypeViewItem";
-import MaterialViewItem from "./../MaterialView/MaterialViewItem";
+import MaterialsViewItem from "../MaterialView/MaterialsViewItem";
 
 function StairTypeView(props) {
 
@@ -14,7 +14,7 @@ function StairTypeView(props) {
             <div className={m.imageBlock}>
                 {state.paintType.paintTypeItems.map(el => {
                     if (el.id === state.selectedPaintTypeId) {
-                        return (<MaterialViewItem id={el.id} img={el.img}/>)
+                        return (<MaterialsViewItem id={el.id} img={el.viewImg} name={el.name}/>)
                     }
                 })}
             </div>
@@ -22,7 +22,7 @@ function StairTypeView(props) {
             <div className={s.imageBlock}>
                 {state.stairsTypes.map(el => {
                     if (el.id === state.selectedStairsTypesId) {
-                        return (<StairTypeViewItem id={el.id} img={el.img}/>)
+                        return (<StairTypeViewItem id={el.id} img={el.viewImg}/>)
                     }
                 })}
             </div>
@@ -30,14 +30,14 @@ function StairTypeView(props) {
                 <div className={m.imageBlock}>
                     {state.materials.map(el => {
                         if (el.id === state.selectedMaterialId) {
-                            return (<MaterialViewItem id={el.id} img={el.img}/>)
+                            return (<MaterialsViewItem id={el.id} img={el.viewImg} name={el.name}/>)
                         }
                     })}
                 </div>
                 <div className={m.imageBlock}>
                     {state.anderStage.map(el => {
                         if (el.id === state.selectedAnderStageId) {
-                            return (<MaterialViewItem id={el.id} img={el.img}/>)
+                            return (<MaterialsViewItem id={el.id} img={el.viewImg} name={el.name}/>)
                         }
                     })}
                 </div>
